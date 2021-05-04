@@ -26,6 +26,7 @@ pipeline{
                     } catch (error) {
                         env.DPROD = false
                         echo 'Timeout has been reached! Deploy to PRODUCTION automatically blocked due to lack of approval'
+                        return false
                     }
                 } 
             }
